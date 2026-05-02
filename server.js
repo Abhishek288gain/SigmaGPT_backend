@@ -75,6 +75,8 @@ passport.deserializeUser(User.deserializeUser());// remove session after expiry 
 app.use("/api", chatRoute);
 app.use("/api", userRoute);
 
+app.set("trust proxy", 1);
+
 // setInterval(() => {}, 1000);
 const connectDb = async () => {
   try {
